@@ -1,0 +1,87 @@
+/* 공통 css */
+header {
+    background-color : #ddd;
+    padding: 10px;
+  }
+
+nav {
+    display: flex;
+    align-items: center;
+  }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;  
+  }
+  
+nav a {
+    
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+  }
+
+main {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding : 50px;
+}
+/*  -----------------------  
+    index.html's CSS
+    -----------------------
+*/
+
+.picture img{
+  width: 200px;
+  height: 190px;
+  margin-right: 100px;
+}
+
+.email, .sns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email img, .sns img{
+  width: 30px;
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+  gap: 15px; /* info와 link 사이 간격 */
+}
+
+li{
+  list-style: none;
+  line-height: 200%;
+}
+
+/*  -----------------------  
+    Hobby.html's CSS
+    -----------------------
+*/
+
+.hobby_info li{
+    list-style: none;
+    line-height: 200%;
+}
+
+main section {
+    margin-right: 100px;
+    
+}
+/*  -----------------------  
+    Goals.html's CSS
+    -----------------------
+*/
+
+.goals_pic img{
+    width: 200px;
+    height: 200px;
+}
