@@ -8,72 +8,92 @@
   padding: 0;
   position: absolute;
 } 
-.navbar{
+
+.nav-menu{
     background-color:rgb(0, 0, 0);
     height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px 0 50px
-  }
-.pages{
+}
+.nav-menu__title{
+  font-size: 50px;
+   color: white;
+}
+.nav-menu__button-container{
+  display: flex; 
+  justify-content: end; 
+  list-style: none;
+}
+.nav-menu__button{
   padding: 10px;
   font-size: 30px;
   text-decoration : none;
   color: white;
 }
-.contents{
-  font-size: 20px;
-}
-.introduceContainer{
+
+
+
+.profile{
   display: flex;
   justify-content: center;
 }
-
-.profile{
+.profile__image{
   padding: 50px; 
   float: inline-start;
 }
-.information{
+.profile__info-container{
   padding: 50px; 
   float: inline-start;
 }
+.profile__info{
+  font-size: 20px;
+}
 
-.goals{
+
+
+.hobby-card{
+  padding: 10px;
+  margin: 20px
+}
+.hobby-card__title{
+  padding: 0;
+  padding-left: 50px;
+}
+.hobby-card__content-container{
+  margin: 0 50px 0 50px;
+  background-color: rgb(239, 239, 239);
+  list-style-type: none; 
+  padding:30px 70px 30px 70px;
+}
+.hobby-card__content{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+
+
+.goals-section{
+  padding-left: 10% ;
+  padding-right: 10% ;
+  display: flex;
+  justify-content: center;
+}
+.goal-card{
   width: 300px;
   height: 400px;
   margin: 40px;
   float:left;
   background-color: rgb(239, 239, 239);
 }
-
-.goalsContainer{
-  padding-left: 10% ;
-  padding-right: 10% ;
-  display: flex;
-  justify-content: center;
-}
-
-.goalComponent{
+.goal-card__header{
   background-color: rgb(195, 195, 195);
   display:flex;
   justify-content: center;
 }
-
-.hobbyContainer{
-  background-color: rgb(239, 239, 239);
-  margin: 0 50px 0 50px;
-  justify-content: left;
-  display: flex;
-  list-style-type: none; 
-  padding: 0;
-
-}
-.hobbyTitle{
-  padding: 0;
-  padding-left: 50px;
-}
-.hobby{
+.goal-card__content{
+  padding: 20px; 
+  text-align: center; 
   font-size: 20px;
-  padding-bottom: 10px;
 }

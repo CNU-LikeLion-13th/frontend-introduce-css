@@ -6,35 +6,32 @@
     <link href="../assets/styles/styles.css" rel="stylesheet" type="text/css" />
     <title>[202102592] 이민철 | Goals</title>
   </head>
-
   <body>
-    <nav class="navbar">
-      <h1 style="font-size: 50px; color: white;">Introduce</h1>
-      <ul style="display: flex; justify-content: end; list-style: none;">
-        <li><a class="pages" href="../../index.html">About Me</a></li>
-        <li><a class="pages" href="hobby.html">Hobby</a></li>
-        <li><a class="pages" href="goals.html">Goals</a></li>
+    <nav class="nav-menu">
+      <h1 class="nav-menu__title">Introduce</h1>
+      <ul class="nav-menu__button-container">
+        <li><a class="nav-menu__button" href="../../index.html">About Me</a></li>
+        <li><a class="nav-menu__button" href="hobby.html">Hobby</a></li>
+        <li><a class="nav-menu__button" href="goals.html">Goals</a></li>
       </ul>
     </nav>
-    <section class = "goalsContainer">
-      <article class = "goals">
-        <header class="goalComponent">
-          <h2>Goal 1</h2>
-        </header>
-        <p style="padding: 20px; text-align: center; font-size: 20px;">멋쟁이 사자 해커톤에서 상 받기</p>
+    <section class = "goals-section">
+      
+      <article class = "goal-card">
+        <header class="goal-card__header"><h2>Goal 1</h2></header>
+        <p class="goal-card__content">멋쟁이 사자 해커톤에서 상 받기</p>
       </article>
-      <article class = "goals">
-        <header class="goalComponent">
-          <h2>Goal 2</h2>
-        </header>
-        <p style="padding: 20px; text-align: center; font-size: 20px;">나만의 웹/앱 개발하기 <br> + 출시하기</p>
+
+      <article class = "goal-card">
+        <header class="goal-card__header"><h2>Goal 2</h2></header>
+        <p class="goal-card__content">나만의 웹/앱 개발하기 <br> + 출시하기</p>
       </article>
-      <article class = "goals">
-        <header class="goalComponent">
-          <h2>Goal 3</h2>
-        </header>
-        <p style="padding: 20px; text-align: center; font-size: 20px;">학점 4점대 넘기기</p>
+
+      <article class = "goal-card">
+        <header class="goal-card__header"><h2>Goal 3</h2></header>
+        <p class="goal-card__content">학점 4점대 넘기기</p>
       </article>
+
     </section>
   </body>
 </html>
