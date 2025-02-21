@@ -33,6 +33,10 @@
   color: white;
 }
 
+.nav-menu__button--active{
+  font-weight: bold;
+}
+
 
 
 .profile{
