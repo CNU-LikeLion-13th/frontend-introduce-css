@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 전체 페이지 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 상단바 */
+header {
+    display: flex;
+    background-color: #afe7ff;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+    height: 15vh;
+    margin: 20px 0 0 0;
+}
+
+/* 상단바 제목 */
+.header__title {
+    font-size: 3rem;
+    margin-left: 2rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* 상단바 제목 img */
+.header__img {
+    height: 5rem;
+}
+
+/* 상단바 내비*/
+.header__nav {
+    margin-right: 2rem;
+    font-size: 1.25rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* 내비 링크 */
+.header__nav__link{
+    text-decoration: none;
+    color: black;
+}
+
+/* 내비 링크 오버 시 */
+.header--nav--a:hover{
+    text-decoration: underline;
+}
+
+/* 메인 컨테이너 스타일 */
+main {
+    margin: 30px 0 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+    display: flex;
+    height: 64vh;
+}
+
+/* section */
+.goals__section, .hobby__section, .index__section {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 자기소개 사진 */
+.index__profile-img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-right: 30px;
+}
+
+/* 자기소개 article */
+.index__article {
+    width: 80%;
+    max-height: 55vh;
+    max-width: 80vh;
+    padding: 20px;
+    border-left: 5px solid grey;
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+/* 자기소개 목록 */
+.index__list {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-right: 20px;
+}
+
+/* 자기소개 링크 표시 없애기 */
+.index__list a {
+    text-decoration: none;
+    color: black;
+}
+
+/* goal 목록 list */
+.goals__list {
+    display: flex;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* goal 목록 list li */
+.goals__item {
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30rem;
+    border: 1px solid grey;
+    margin-right: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+/* goal 목록 list li h2 */
+.goals__title {
+    padding: 30px;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    height: 2rem;
+    align-items: center;
+    background-color: #cbff93;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+
+/* goal 목록 list li p */
+.goals__desc {
+    text-align: left;
+    margin: 30px;
+    line-height: 1.6;
+}
+
+/* goal 목록 list li p strong */
+.goals__desc strong {
+    color: tomato;
+}
+
+/* 취미 이미지 figure */
+.hobby__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 14rem;
+    height: auto;
+    margin-top: 0;
+}
+
+/* 취미 이미지 img */
+.hobby__figure-img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    display: block;
+}
+
+/* 취미 내용 article */
+.hobby__article {
+    width: 60%;
+    padding: 20px;
+    border-left: 5px solid grey;
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin-right: 20px;
+}
+
+/* 취미 내용 p */
+.hobby__text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* 하단부 */
+footer {
+    text-align: right;
+}
+
+/* 하단부 img */
+.footer__logo {
+    height: 1rem;
+}
+
+/* 해당 페이지와 일치하는 목차 숨기기 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 화면 너비가 768px 이하일 때 세로 정렬 */
+@media (max-width: 900px) {
+    /* main 높이 조절 */
+    main {
+        height: auto;
+        padding: 10px;
+    }
+
+    /* 섹션 세로 정렬 */
+    .index__section, .hobby__section {
+        flex-direction: column;
+    }
+
+    /* 자기소개 이미지 크기 조정 */
+    .index__profile-img, .hobby__figure {
+        width: 50%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* 자기소개 섹션 크기 조정 */
+    .index__article, .hobby__article {
+        width: 90%;
+        max-height: none;
+    }
+
+    /* 목표 리스트 세로 정렬 */
+    .goals__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 목표 아이템 크기 */
+    .goals__item {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
