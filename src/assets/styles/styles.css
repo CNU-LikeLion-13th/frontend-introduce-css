@@ -16,7 +16,7 @@ body {
 
 .nav-menu{
     background-color:#FF7710;
-    height: 130px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,13 +27,13 @@ body {
   align-items: flex-end;
 }
 .nav-menu__logo{
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 900;
   color: black;
 }
 .nav-menu__name{
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
 }
 .nav-menu__button-container{
@@ -43,7 +43,7 @@ body {
 }
 .nav-menu__button{
   padding: 10px;
-  font-size: 30px;
+  font-size: 25px;
   text-decoration : none;
   color: black;
 }
