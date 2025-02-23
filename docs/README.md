@@ -25,24 +25,71 @@
 
 # 2주차 과제 진행
 ## sr-only
-.sr-only 클래스를 사용하여 화면에는 보이지 않지만 스크린 리더로는 인식할 수 있는 컨텐츠를 생성할 수 있다.
+.sr-only 클래스를 사용하여 화면에는 보이지 않지만 스크린 리더로는 인식할 수 있는 컨텐츠를 생성할 수 있음
 
 디테일한 설명 부분에서 sr-only 클래스를 사용할 수 있을 것 같다.
 
 ## BEM 방법론
 ### B : 블록(Block)
-독립적이고 재사용 가능하며 논리적으로 독립된 개체이다.
+독립적이고 재사용 가능하며 논리적으로 독립된 개체
 > e.g. header, button, nav-menu
 ### E : 요소(Element)
-블록의 일부로, 독립적인 의미가 없고 블록과 의미적으로 연결되어 있다.
+블록의 일부로, 독립적인 의미가 없고 블록과 의미적으로 연결되어 있음
 > e.g. nav-menu__item nav-menu__logo
 ### M : 수식어(Modifier)
-블록이나 요소의 플래그. 모양이나 동작을 변경하는 데 사용합니다.
+블록이나 요소의 플래그. 모양이나 동작을 변경하는 데 사용
 > e.g. nav-menu__item--active
 
-B__E--M 형식으로 언더바, 하이픈 2개씩으로 연결하여 사용한다.
-
+B__E--M 형식으로 언더바, 하이픈 2개씩으로 연결하여 사용
 ## CSS 네이밍 규칙
 * 소문자, 숫자 조합으로 사용
 * 조합은 -(하이픈) 으로 연결하여 사용
 * 정수는 한자리 보다 01, 02 같이 사용을 권장
+
+## CSS display
+> 박스 모델을 정의하고 어떻게 배치될지를 설정
+```
+  display: block          /* 블록 레벨 요소 (전체 너비 차지) */
+  display: inline         /* 인라인 요소 (내용만큼의 너비 차지) */
+  display: inline-block   /* 인라인처럼 배치되지만, 너비와 높이를 설정 가능 */
+  display: flex           /* 플렉스 컨테이너 (플렉스 아이템 배치) */
+  display: grid           /* 그리드 컨테이너 (그리드 아이템 배치) */
+  display: none           /* 요소를 보이지 않게 함 (공간 차지하지 않음) */
+  display: table          /* 테이블 레이아웃으로 표시 */
+```
+`display: flex` 를 가장 많이 사용했다. CSS Flex에 대해 추가적인 공부가 필요할 것 같다.
+
+## CSS text-align
+> 텍스트의 정렬 기준
+```
+  text-align: start         /* 왼쪽 정렬 (글 방향이 좌 -> 우 일 경우) */
+  text-align: end           /* 오른쪽 정렬 (글 방향이 좌 -> 우 일 경우) */
+  text-align: left          /* 왼쪽 정렬 */
+  text-align: right         /* 오른쪽 정렬 */
+  text-align: center        /* 가운데 정렬 */
+  text-align: justify       /* 양쪽 정렬 */
+  text-align: justify-all   /* 양쪽 정렬 (마지막 줄에도 적용) */
+  text-align: match-parent  /* 부모의 방향에 따라 정렬 */
+```
+
+## CSS align-items
+> Vertical 정렬을 할 때 사용
+```
+  align-items: stretch(default) /* container 전체에 맞춤 */
+  align-items: center           /* container의 가운데 정렬 */
+  align-items: start            /* container의 위쪽 정렬 */
+  align-items: end              /* container의 아래쪽 정렬 */
+```
+
+## CSS justify-content
+> 메인 축(Horizontal) 정렬을 할 때 사용
+
+```
+  justify-content: center;      /* 항목들을 축의 중심 부분에 정렬 */
+  justify-content: start;       /* 항목들을 축의 시작 부분에 정렬 */
+  justify-content: end;         /* 항목들을 축의 끝 부분에 정렬 */
+  justify-content: flex-start;  /* 플렉스 항목들을 축의 시작 부분에 정렬 */
+  justify-content: flex-end;    /* 플렉스 항목들을 축의 끝 부분에 정렬 */
+  justify-content: left;        /* 항목들을 축의 왼쪽 부분에 정렬 */
+  justify-content: right;       /* 항목들을 축의 오른쪽 부분에 정렬 */
+```
