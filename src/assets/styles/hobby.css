@@ -1,0 +1,43 @@
+.hobby-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.hobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+
+}
+
+.hobby img {
+    transition: 0.5s ease;
+    height:300px;
+    width:300px;
+    border:0px;
+}
+
+.take_pic {
+    background-image: url('../images/takepic.png');
+    background-size: cover;
+}
+
+.take_pic:hover {
+    background-image: url('../images/pic_sample.jpg');
+    background-size: cover;
+}
+
+.boardgame {
+    background-image: url('../images/boardgame.png');
+    background-size: cover;
+}
+
+.boardgame:hover {
+    background-image: url('../images/boardgame_sample.jpg');
+    background-size: cover;
+}
