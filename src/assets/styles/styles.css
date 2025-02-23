@@ -15,16 +15,26 @@ body {
 } 
 
 .nav-menu{
-    background-color:rgb(0, 0, 0);
+    background-color:#FF7710;
     height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px 0 50px
 }
-.nav-menu__title{
+.nav-menu__logo-container{
+  display: flex;
+  align-items: flex-end;
+}
+.nav-menu__logo{
   font-size: 50px;
-   color: white;
+  font-weight: 900;
+  color: black;
+}
+.nav-menu__name{
+  font-weight: 700;
+  font-size: 25px;
+  color: black;
 }
 .nav-menu__button-container{
   display: flex; 
@@ -35,7 +45,7 @@ body {
   padding: 10px;
   font-size: 30px;
   text-decoration : none;
-  color: white;
+  color: black;
 }
 
 .nav-menu__button--active{
