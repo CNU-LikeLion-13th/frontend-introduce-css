@@ -1,0 +1,29 @@
+.total_title {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    top: 65px;
+}
+
+.total_title h1 {
+    font-size: 40px;
+}
+
+.goals_container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+.goal {
+    padding: 10px;
+    width: 320px;
+    height: 270px;
+    border: 2px solid #ff7710;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.goal_title {
+    text-align: center;
+}

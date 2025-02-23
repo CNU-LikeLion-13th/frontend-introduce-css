@@ -1,0 +1,40 @@
+.information {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-top: 30px;
+}
+
+.profile-wrapper {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 25px;
+}
+
+.introduce {
+    padding: 10px;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact a {
+    padding-left: 0px;
+    padding-right: 10px;
+    margin: 0px;
+}
+
