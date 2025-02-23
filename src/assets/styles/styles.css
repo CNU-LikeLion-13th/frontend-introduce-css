@@ -94,10 +94,13 @@ body {
 }
 
 
-
+.goals-header{
+  padding: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+}
 .goals-section{
-  padding-left: 10% ;
-  padding-right: 10% ;
   display: flex;
   justify-content: center;
 }
@@ -106,15 +109,21 @@ body {
   height: 400px;
   margin: 40px;
   float:left;
-  background-color: rgb(239, 239, 239);
+  border: 2px solid #FF7710;
 }
 .goal-card__header{
-  background-color: rgb(195, 195, 195);
+  height: 15%;
+  background-color:#FF7710;
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 .goal-card__content{
-  padding: 20px; 
-  text-align: center; 
+  margin: 0;
+  height: 85%;
   font-size: 20px;
+  display: flex;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
 }
