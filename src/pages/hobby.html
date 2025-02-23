@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[202302588] 이가은 | Hobby</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">LIKELION_gaeun</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">About me</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="goal.html">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <div class="slider-container">
+                <div class="slides">
+                    <img src="../assets/images/hobby1.jpeg" alt="취미 관련 사진 1">
+                    <img src="../assets/images/hobby2.jpeg" alt="취미 관련 사진 2">
+                    <img src="../assets/images/hobby3.jpeg" alt="취미 관련 사진 3">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="text">
+                <p>🏋️‍♀️ 웨이트</p>
+                <p>🐶 강아지 산책</p>
+                <p>🏃‍♀️ 런닝</p>
+                <p>🧘‍♀️ 플라잉 요가</p>
+                <p>🎧 클래식 듣기</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 이가은
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slides img').length;
+
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            slides.style.transform = `translateX(-${currentIndex * 50}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    </script>
+</body>
+</html>
