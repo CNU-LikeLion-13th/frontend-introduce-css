@@ -1,9 +1,86 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[202201912] 이서인 | About me</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="src/assets/styles/styles.css"/>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">SEOIN</h1>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link nav__link--active">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="src/pages/hobby.html" class="nav__link">Hobby</a>
+          </li>
+          <li class="nav__item">
+            <a href="src/pages/goal.html" class="nav__link">Goals</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hello">
+      <div class="hello__image-wrap">
+        <img
+          src="src/assets/images/picture.jpg"
+          alt="프로필 사진"
+          class="hello__image"
+        />
+      </div>
+      
+      <div class="hello_right">
+        <div class="hello__content">
+          <h2 class="hello__title">무럭무럭 <span class="highlight">성장하는 개발자</span>,<br />이서인입니다</h2>
+          <p class="hello__desc">
+            <strong>"당신의 오늘은 잘 기억되고 있나요?" </strong><br />
+            사람의 기억에는 한계가 있고, 시간이 지날수록 잊혀지길 마련입니다<br />
+            그래서, 저는 기록을 습관화하여 기억하게 된 일상의 조각들을 모아볼 생각입니다 <br /><br />
+            저의 첫 번째 기록에 와주셔서 감사합니다💙
+          </p>
+          <ul class="hello__info-list">
+            <li class="hello__info-item"><strong>전화번호:</strong> 010-9073-9302</li>
+            <li class="hello__info-item"><strong>이메일:</strong> <a href="mailto:sslynn22@naver.com">sslynn22@naver.com</a></li>
+          </ul>
+        </div>
+
+        <section class="social">
+          <h2 class="sr-only">소셜 링크</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://ssrindev.tistory.com/" target="_blank" class="social__link">
+                <img src="src/assets/images/tistory.png" alt="티스토리 블로그" class="social__icon">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://github.com/sslynn22" target="_blank" class="social__link">
+                <img src="src/assets/images/github.png" alt="GitHub" class="social__icon">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://www.instagram.com/seoinniing" target="_blank" class="social__link">
+                <img src="src/assets/images/instagram.png" alt="Instagram" class="social__icon">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+  </main>
+</body>
 </html>
