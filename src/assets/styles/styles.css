@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  padding: 0; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  border: 0;
+}
+
+.header {
+  background: #2F80ED;
+  padding: 1rem 0;
+}
+.header__inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; 
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+.nav__link--active {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 5rem;
+}
+
+.highlight {
+  color: #2F80ED;
+  font-weight: bold;
+}
+
+/* ----- Main Section ----- */
+.hello {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hello__right {
+  flex: 1.1;
+  margin-left: -2rem;
+  display: flex;
+  justify-content: column;
+  align-items: center;
+}
+
+.hello__image-wrap {
+  flex: 0.9;
+  margin-left: 20rem; 
+  display: flex;
+  align-items: center;
+}
+
+
+.hello__image {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.hello__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  max-width: 500px; 
+}
+
+.hello__title {
+  margin-top: 0;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hello__desc {
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.6;
+}
+
+.hello__info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hello__info-item + .hello__info-item {
+  margin-top: 0.25rem;
+}
+
+.social {
+  margin-top: 1.5rem; 
+  width: 100%; 
+  display: flex;
+}
+
+.social__list {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social__icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* ----- Hobby Section ----- */
+.hobby {
+  text-align: center;
+}
+
+.hobby__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2F80ED;
+  margin-bottom: 0.3rem;
+}
+
+.hobby__desc {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.hobby__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 700px; 
+  margin: 0 auto;
+}
+
+.hobby__item {
+  background: #555;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby__image {
+  width: 300px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.hobby__item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.hobby__item-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hobby__item-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ----- Goals Section ----- */
+.goal {
+  text-align: center;
+}
+
+.goal__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2F80ED;
+  margin-bottom: 0.5rem;
+}
+.goal__desc {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.goal__grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal__item {
+  flex: 1;
+  padding: 1.3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goal__item--left {
+  background: #2F80ED;
+}
+
+.goal__item--center {
+  background: white;
+  color: #333;
+  border: 2px solid #2F80ED;
+}
+
+.goal__item--right {
+  background: #2F80ED;
+}
+
+.goal__grid--single {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.goal__item--lab {
+  flex: 1; 
+  max-width: 33%;
+  background: #2F80ED;
+  color: white;
+  padding: rem;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
