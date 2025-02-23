@@ -62,13 +62,17 @@ body {
   padding: 50px; 
   float: inline-start;
 }
-.profile__info-container{
-  padding: 50px; 
-  float: inline-start;
+.profile__container{
+  padding: 20px; 
 }
-.profile__info{
-  font-size: 20px;
+.profile__name{
+  font-size: 40px;
 }
+.profile__content{
+  font-size: 25px;
+  line-height: 1.5;
+}
+
 
 
 
