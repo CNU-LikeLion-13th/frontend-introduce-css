@@ -1,13 +1,33 @@
 /* 공통 css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  padding: 0; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  border: 0;
+}
+
 header {
-    background-color : #ddd;
+    background-color : #ff7710;
     padding: 10px;
   }
-
+body {
+  margin: 0;
+}
 nav {
     display: flex;
     align-items: center;
   }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -22,11 +42,12 @@ nav a {
   }
 
 main {
+  
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
-    padding : 50px;
+    padding : 100px;
 }
 /*  -----------------------  
     index.html's CSS
@@ -34,9 +55,10 @@ main {
 */
 
 .picture img{
-  width: 200px;
-  height: 190px;
-  margin-right: 100px;
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 .email, .sns {
@@ -47,14 +69,13 @@ main {
 
 .email img, .sns img{
   width: 30px;
-
 }
 
 .info {
   display: flex;
-  flex-direction: column; /* 세로 정렬 */
-  align-items: flex-start; /* 왼쪽 정렬 */
-  gap: 15px; /* info와 link 사이 간격 */
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 15px; 
 }
 
 li{
@@ -66,22 +87,56 @@ li{
     Hobby.html's CSS
     -----------------------
 */
-
-.hobby_info li{
-    list-style: none;
-    line-height: 200%;
+.hobby_info{
+  padding-bottom: 100px;
 }
 
-main section {
-    margin-right: 100px;
-    
+.hobby_info ul{
+    list-style: none;
+    line-height: 200%;
+    padding-left: 0;
 }
 /*  -----------------------  
     Goals.html's CSS
     -----------------------
 */
 
+#goals_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 355px;
+  margin: 0px 55px;
+  border: 2px solid #FF7710;
+}
+
+.goals_title{
+  margin: 0px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #FF7710;
+  color: white;
+}
 .goals_pic img{
+  
     width: 200px;
     height: 200px;
+}
+
+.color {
+  font-weight: bold;
+  color :#FF7710;
 }
