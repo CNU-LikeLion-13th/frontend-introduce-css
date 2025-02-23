@@ -1,0 +1,142 @@
+/* 공통 css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  padding: 0; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  border: 0;
+}
+
+header {
+    background-color : #ff7710;
+    padding: 10px;
+  }
+body {
+  margin: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+  }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;  
+  }
+  
+nav a {
+    
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+  }
+
+main {
+  
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding : 100px;
+}
+/*  -----------------------  
+    index.html's CSS
+    -----------------------
+*/
+
+.picture img{
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.email, .sns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email img, .sns img{
+  width: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 15px; 
+}
+
+li{
+  list-style: none;
+  line-height: 200%;
+}
+
+/*  -----------------------  
+    Hobby.html's CSS
+    -----------------------
+*/
+.hobby_info{
+  padding-bottom: 100px;
+}
+
+.hobby_info ul{
+    list-style: none;
+    line-height: 200%;
+    padding-left: 0;
+}
+/*  -----------------------  
+    Goals.html's CSS
+    -----------------------
+*/
+
+#goals_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 355px;
+  margin: 0px 55px;
+  border: 2px solid #FF7710;
+}
+
+.goals_title{
+  margin: 0px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #FF7710;
+  color: white;
+}
+.goals_pic img{
+  
+    width: 200px;
+    height: 200px;
+}
+
+.color {
+  font-weight: bold;
+  color :#FF7710;
+}
