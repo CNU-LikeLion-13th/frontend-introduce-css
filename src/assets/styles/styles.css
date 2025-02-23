@@ -55,6 +55,7 @@ body {
 
 
 .profile{
+  padding: 100px;
   display: flex;
   justify-content: center;
 }
