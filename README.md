@@ -1,32 +1,99 @@
-# 👋 자기소개(CSS)
+# 👋 자기소개(CSS)_202302581우다연
 
-## 💻 진행 방식
 
-- 미션은 요구 사항, 과제 진행 요구 사항으로 구성되어있다.
-- 두 요구 사항을 만족해야한다.
+## BEM방법론(Block Element Modifier)
+⤻ 코드의 목적과 역할을 중심으로 class name을 직관적으로 작성하는 것
 
-## 🧑‍💻 요구 사항
+✅ 장점
+  - 구조를 직관적으로 파악할 수 있음
+  - css/html 유지보수 간편하게 만들어줌
 
-- [디자인 시안](https://www.figma.com/file/VmunWo93cJUfucgOXcpJCW/%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%98%88%EC%8B%9C?type=design&node-id=0-1&mode=design&t=B8DaEqkfrhGlO21c-0)을 바탕으로 자기소개 페이지를 완성한다. (제시된 디자인 시안 외에 원하는 디자인으로 진행 가능)
-- **About me** 페이지는 `index.html`에 작성한다. 그 외의 페이지는 `pages` 폴더에 관리한다.
-- 카테고리를 클릭하면 해당 페이지로 이동하도록 구현한다.
-- SNS 이미지를 클릭하면 본인의 SNS로 이동하도록 구현한다.
-- 문서의 언어는 `ko`로 설정한다.
-- 각 페이지의 title은 `[학번] 이름 | 카테고리` 형식을 지켜 작성한다. <br />
-  ex) [202112345] 아무개 | About me
-- 모든 css 코드는 `/assets/styles`경로에 위치시키고, 이를 링킹하여 스타일링한다.
-- **시멘틱 태그**를 고려하여 작성한다.
-  - 시각장애인분들이 우리의 문서를 본다는 것을 염두하여 작성한다.
-- [`.sr-only`](https://uit.stanford.edu/accessibility/concepts/screen-reader-only-content) 클래스 활용하여 필요한 정보는 남기고 시각적으로는 가릴 수 있는 방안을 활용한다.
-- [BEM 방법론](https://getbem.com/introduction/)을 활용하여 클래스 명을 작성한다.
-- `div`, `span`태그의 사용을 최대한 지양한다.
-- 문서의 폰트는 [**Google Fonts**](https://fonts.google.com/)를 통해 **Roboto**를 임베드하여 사용한다.
-- README.md 작성법은 [다음](https://commonmark.org/help/)을 참고한다.
-- [**Github Pages**](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)를 통해 웹 페이지를 배포한 후, 배포 링크는 **PR 내용**에 기재하여 제출한다.
-- 2주차 과제는 **2월 23일 자정**까지 제출한다.
+🔴 단점
+  - 클래스 이름이 지나치게 길어질 수 있음
 
-## 🚀 과제 진행 요구 사항
+- Block:
+  - 자체로 독립적인 요소로 재사용이 가능
+  - 전체를 감싸고 있는 큰 틀의 container(사용자 UI의 의미있는 부분이 중심)
+  - 즉, 다른 요소를 포함하는 container
 
-- 미션은 **frontend-introduce-css** 저장소를 fork하고 clone하여 시작한다.
-- 미션 완료 이후 `docs/README.md`에 미션을 통해 배운 내용들을 작성한다.
-- 과제 진행 및 제출 방법은 **[미션 진행 가이드](https://www.notion.so/f0571981555d4509839b9db8d5382162?pvs=21)** 문서를 참고한다.
+- Element:
+  - 블록과 연결된 내부 요소로, 블록 안에서만 의미를 가짐
+  - 즉, 블록 내부를 구성하고 특정 기능을 수행하는 요소
+  - ex: 메뉴라는 컨테이너 내부에 버튼과 로고가 포함된다면 menu__logo, menu__button
+
+- Modifier:
+  - 블록 또는 요소의 모양,상태,동작 등을 나타내는 것
+  - ex: 메뉴-버튼 중 이미지가 있는 버튼이라면 menu__button—image
+
+
+## .sr-only
+⤻ 시각 장애인을 위한 스크린 리더 전용 클래스
+- 화면에 보이지는 않지만 스크린 리더 사용자아게 필요한 정보를 제공하거나, 불필요한 정보를 숨길 때 사용.
+
+```
+span class="sr-only">“”</span>
+aria-label=""
+```
+
+```
+.sr-only{
+    position: absolute; //문서 흐름에서 독립적으로 위치하게 함
+    width: 1px;  
+    height: 1px;  //width,height !=0 으로 하여여 스크린리터가 해당 요소를 감지할 수 있도록 함
+    padding: 0;
+    margin: -1px; //padding.,margin 여백을 제거하여 화면에서의 공간을 최소화
+    overflow: hidden; //요소의 내용이 지정된 크기를 벗어나지 않도록 함.
+    clip: rect(0,0,0,0);  //글리핑 영역을 설정해 화면에 표지하지 않도록 설정
+    white-space: nowrap;  // 텍스트의 줄바꿈을 금하여 텍스트가 한 줄로 이어지도록 함
+    border: 0;  //테두리를 제거하여 시각적으로 감지되지 않도록 함
+}
+```
+
+➔ .sr-only 클래스를 사용해 정보를 입력하며 css로 페이지에 보이지 않게 설정 
+
+🔴 aria-label=""  사용시 중복된 정보 및 불필요한 정보 주의하기
+  - ex: 
+    1. td에 arila-label 추가
+    ```
+    <td aria-label="홍길동">홍길동</td>
+    ```
+    2. h2에 aria-label 추가
+    ```
+    <h2 aria-label="홈 페이지">홈 페이지</h2>
+    ```
+    3. figure에 aria-label추가
+    ```
+     <figure aria-label="강아지 사진">  <img src="dog.jpg" alt="강아지"></figure>
+    ```
+  - 스크린 리더는 html요소 자체의 의미와 구조를 따라 읽음
+  - 시맨틱 태그는(h2,figure)는 그 자체로 의미를 가지고 있고, 비시맨틱 태그지만 html의 구조적 역할을 수행하는(td) 또한 스크린 리더가 인식함. 따라서 다음 예시들은 중복된 정보를 제공하고 있다.(물론, arla로 명확한 정보를 줄 수 있음)
+  - 하지만, 비시맨틱 태그는 그 자체로 의미를 전달하지 않기에 이때  aria 속성을 사용해 정보를 제공해야함.
+
+🔍  aria-hidden="true" 
+  - 불불필요한 정보는 스크린리더가 읽지 않도록 숨기는 것 
+  - ex: 아이콘,배경,이미지 등 장식에 중점을 둔 요소는 의미를 전달하는데 있어 불필요함.
+
+
+## dl,dt,dd
+- dl: 설명 목록을 나타내는 전체 태그
+- dt: 정의할 용어 
+- dd: 용어에 대한 설명
+
+🔍 ul,li  vs dl,dt,dd
+  - ul, li :  순서가 없는 목록. 즉, 단순히 항목을 나열할 때 사용
+  - dl, dt, dd: 설명 목록. 용어와 설명을 매칭하여 항목을 나열할 때 사용
+  - ➔ 이 또한 html 구조적 요소이기에 스크린리더가 감지함(dl 경우 용어-설명 관계로 설명하지만, ul의 경우 코드 순서대로 설명함)
+  -  그럼 dl, dt, dd를 ul,li처럼 사용가능할까❓
+  -  dl,dt,dd를 순서 없는 목록으로 사용하였을 경우 스크린리더 사용자들이 전체 메뉴 구조를 파악할 수 없다는 문제가 발생함
+  - 즉, dt,dd가 1:1쌍 이루어 사용하는 것이 가장 베스트. if, 1:2가 될 경우 ul를 사용하는 것이 적합
+
+## figure-figurecaption vsimg
+- img : 사진이 뜨지 못하는 경우 alt 정보를 통해 이미지에 대한 간단한 설명 제공
+  - ➔ 이는 긴설명이나 추가적인 정보를 제공하기에 한계가 있음
+- figure: 문서 흐름에 벗어나 독립적임,  figurecaption을 통해 콘텐츠에 대하 부가적인 자세한 설명이 가능함(이미지의 출처,제목 등등)
+  - ➔ 스크린리더가 하나의 그룹으로 인지해 이미지와 설명을 구조적으로 묶어서 설명(접근성 굿굿)
+
+
+
+
+
